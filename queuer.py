@@ -211,7 +211,7 @@ class RedisClient:
         else:
             task_id = config.task_id
         content = {
-            "use_gpus": ','.join([str(gpu) for gpu in list(config.visible_cuda)]),
+            "use_gpus": ",".join([str(Device.cuda.from_cuda_indices(gpu)[0].physical_index) for gpu in list(config.visible_cuda)]),
             "register_time": datetime.datetime.strftime(curr_time,
                                                         '%Y-%m-%d %H:%M:%S'),
             "system_pid": os.getpid(),
