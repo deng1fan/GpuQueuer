@@ -39,7 +39,7 @@ def set_config_gpus(config):
         self_occupied_gpus = redis_client.get_self_occupied_gpus()
         gpu_all_free = True
         for gpu in reserve_gpus:
-            if gpu in self_occupied_gpus:
+            if Device.cuda.from_cuda_indices(gpu)[0].physical_index in self_occupied_gpus:
                 gpu_all_free = False
         if not config.wait_gpus and not gpu_all_free:
             raise Exception("指定GPU并未全部空闲，建议使用排队功能！")
