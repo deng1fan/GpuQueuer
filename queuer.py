@@ -4,7 +4,7 @@ import os
 import datetime
 from redis import Redis
 from nvitop import Device, select_devices
-
+import time
 
 def set_config_gpus(config):
     redis_client = RedisClient()
@@ -249,5 +249,6 @@ class Config:
 if __name__ == '__main__':
     config = Config()
     config = set_config_gpus(config)
+    time.sleep(10)
     print()
 
