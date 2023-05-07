@@ -2,7 +2,7 @@ from queuer import RedisClient
 import psutil
 import json
 import time
-from nvitop import Device, GpuProcess, NA, colored
+from nvitop import Device, GpuProcess, NA
 
 
 redis_client = RedisClient()
@@ -27,7 +27,7 @@ while True:
     devices = Device.all()  # or `Device.all()` to use NVML ordinal instead
     separator = False
     for device in devices:
-        processes = device.processes()  # type: Dict[int, GpuProcess]
+        processes = device.processes()
 
         gpu['index'] = device.physical_index
         gpu['GPU utilization'] = f'{device.gpu_utilization()}%'
