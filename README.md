@@ -1,12 +1,14 @@
-# dg_gpu_queuer
+# GpuQueuer
 ![](https://img.shields.io/badge/License-GNU%20General%20Public%20License%20v3.0-green)
 ![](https://img.shields.io/badge/Python-3.8-blue)
 ![](https://img.shields.io/badge/Databse-Redis-blue)
 ![](https://img.shields.io/badge/知乎-一个邓-orange)
 
-![](https://github.com/appleloveme/dg_gpu_queuer/blob/main/imgs/screenshot.png)
+![](https://github.com/deng1fan/GpuQueuer/blob/main/imgs/screenshot.png)
 
 [博客](https://zhuanlan.zhihu.com/p/552967858)
+
+# 目前该仓库已不再维护！相关功能已迁移至新项目：Lazydl
 
 超轻量级！
 
